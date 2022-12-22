@@ -44,6 +44,12 @@ const main = (state = mainState, action) => {
         case mainActions.UPDATE_ONLINE_USER_FAILED:
             newState = { ...state };
             break;
+        case mainActions.USER_LOGOUT_SUCCESS:
+            newState = { ...state, ...action.payload }
+            break
+        case mainActions.USER_LOGOUT_FAILED:
+            newState = { ...state }
+            break
         default:
             newState = state;
             break;

@@ -34,3 +34,18 @@ const updateOnlineUsersWorker = function* (action) {
 export const updateOnlineUsersWatcher = function* () {
     yield takeLatest(mainActions.UPDATE_ONLINE_USER_INIT, updateOnlineUsersWorker);
 };
+
+const userLogoutWorker = function* (action) {
+    try {
+        yield call(() => {
+            localStorage.removeItem('token')
+        })
+        yield put({ type: mainActions.USER_LOGOUT_SUCCESS, payload: { isUserLoggedIn: false } });
+    } catch (error) {
+        yield put({ type: mainActions.USER_LOGOUT_FAILED,});
+    }
+
+};
+export const userLogoutWatcher = function* () {
+    yield takeLatest(mainActions.USER_LOGOUT_REQUESTED, userLogoutWorker);
+};

@@ -41,7 +41,7 @@ function Login({ doLogin, authStatus, authMessage, isUserLoggedIn }) {
                             </div>
                             <button type="submit" className="btn primary">ورود</button>
                             <span> ثبت نام نکرده اید؟
-                            <Link to="/auth/register">ثبت نام</Link>
+                                <Link to="/auth/register">ثبت نام</Link>
                             </span>
                         </form>
                     </div>

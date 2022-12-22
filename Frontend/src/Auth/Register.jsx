@@ -2,8 +2,10 @@ import React, { useEffect, useState } from 'react'
 import { connect } from 'react-redux';
 import userActions from '../Store/Actions/authActions';
 import { Link, Redirect } from 'react-router-dom';
+
 function Register({ registerUser, authStatus, authMessage }) {
     const [redirectToLogin, setRedirectToLogin] = useState(false);
+    
     useEffect(() => {
         if (authStatus) {
             setTimeout(() => {
@@ -24,6 +26,7 @@ function Register({ registerUser, authStatus, authMessage }) {
             </div>
         </div>
     };
+
     return (
 
         <>
@@ -64,6 +67,8 @@ function Register({ registerUser, authStatus, authMessage }) {
         </>
     )
 }
+
+
 export default connect(state => {
     return {
         authStatus: state.main.authStatus,

@@ -1,8 +1,12 @@
 import React from 'react'
 import Logo from '../Partials/Logo';
-import mainActions from '../../Store/Actions/mainActions';
+import mainAction from '../../Store/Actions/mainActions'
 import { connect } from 'react-redux';
-function Navigation({ me }) {
+function Navigation({ me, logout }) {
+    const userLogout = e => {
+        e.preventDefault();
+        logout()
+    }
     return (
         <nav className="navigation">
             <div className="container">
@@ -26,7 +30,7 @@ function Navigation({ me }) {
                         </button>
                     </li>
                     <li>
-                        <button type="button" className="btn mode">
+                        <button type="button" className="btn mode" onClick={e => userLogout(e)}> 
                             <i data-eva="power-outline" data-eva-animation="pulse"></i>
                         </button>
                     </li>
@@ -40,4 +44,8 @@ function Navigation({ me }) {
         </nav>
     )
 }
-export default connect(state => ({ me: state.main.me }))(Navigation);
+export default connect(state => ({ me: state.main.me }),
+    dispatch => ({
+        logout: payload => { dispatch({ type: mainAction.USER_LOGOUT_REQUESTED, payload }) }
+    })
+)(Navigation);

@@ -17,6 +17,7 @@ export default function* root() {
         chatHandler.newChatWatcher(),
         chatHandler.finishChatWatcher(),
         mainHandler.updateOnlineUsersWatcher(),
-        chatHandler.activateRecentChatWatcher()
+        chatHandler.activateRecentChatWatcher(),
+        mainHandler.userLogoutWatcher(),
     ]);
 }
