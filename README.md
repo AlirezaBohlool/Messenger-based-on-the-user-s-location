@@ -1,9 +1,26 @@
 # Messenger-based-on-the-user-s-location
-![Screenshot from 2022-12-13 17-04-04](https://user-images.githubusercontent.com/98082833/207356589-1e9b1746-5fa6-4435-a89c-8595bd08b401.png)
+  This is a messenger based on the location of users
 
-## Tech Stack
+![image](https://user-images.githubusercontent.com/107199800/204584963-6ba30052-ba17-468b-bd88-e12b901dcac8.png)
 
-**Client:** React , react-router-dom , Redux , Redux-saga , Boostrap , leaflet , sweetalert2 , axios 
 
-**Server:** Node , Express , WebSocket(Sockjs) , WebRTC(peerjs) , MongoDB , Mysql , Redis , ORM , ODM
+![image](https://user-images.githubusercontent.com/107199800/204828686-7d329597-165a-4751-8a58-2c8c58d1385f.png)
 
+
+## Project capabilities:
+
+video call , voice call , Chat and found people with Location
+
+    
+## 🚀 Technologies:
+  Frontend:
+    Javascript, HTML, Bootstrap ,React , Redux,Redux-saga,react-router-dom,leaflet,sweetalert2,axios
+    
+  Backend:
+    Node js,Express,Jsonwebtoken,Bcrypt,Jalali-moment
+    
+  Database:
+    mongodb(mongoose),mysql(bookshelf),redis(ioredis)
+    
+  Other:
+    WebRTC(peerjs),WebSocket(Sockjs)
